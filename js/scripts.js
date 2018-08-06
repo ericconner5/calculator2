@@ -49,4 +49,5 @@ var celsFahren = parseInt(prompt("Enter a Celsius temp yo dog: "));
 var convert = function(celsFahren) {
   return ((celsFahren*1.8)+32);
 };
+
 alert(convert(celsFahren));
