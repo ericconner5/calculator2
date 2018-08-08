@@ -1,0 +1,17 @@
+.bot-align {
+  margin-top: 32px;
+}
+
+.result {
+  width: 100px;
+  height: 38px;
+  border: 1px solid #000;
+  margin-left: 10px;
+  float: left;
+  text-align: center;
+  line-height: 2.2em;
+}
+
+.btn-float {
+  float: left;
+}
