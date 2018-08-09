@@ -3,15 +3,9 @@
 }
 
 .result {
-  width: 100px;
+  width: 80%;
   height: 38px;
-  border: 1px solid #000;
-  margin-left: 10px;
-  float: left;
+  border-bottom: 1px solid #000;
   text-align: center;
   line-height: 2.2em;
-}
-
-.btn-float {
-  float: left;
 }

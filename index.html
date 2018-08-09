@@ -13,27 +13,52 @@
       <hr>
       <!-- Addition -->
       <h3>Time to Math</h3>
-      <form id="add">
+      <form id="calculate">
         <div class="container">
           <div class="row">
             <div class="col">
               <div class="form-group">
-                <label for="add1">1st number:</label>
-                <input id="add1" class="form-control" type="text">
+                <label for="input1">1st number:</label>
+                <input id="input1" class="form-control" type="text">
               </div>
             </div>
             <div class="col">
               <div class="form-group">
-                <label for="add2">2nd number:</label>
-                <input id="add2" class="form-control" type="text">
+                <label for="input2">2nd number:</label>
+                <input id="input2" class="form-control" type="text">
               </div>
             </div>
             <div class="col">
-              <div class="bot-align">
-              <div class="btn-float">
-                <button type="submit" class="btn btn-primary">Equate: </button>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="operator" value="add" checked>
+                  Add
+                </label>
               </div>
-              <div id="add-output" class="result">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="operator" value="sub">
+                  Subtract
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="operator" value="times">
+                  Multiply
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="operator" value="div">
+                  Divide
+                </label>
+              </div>
+
+            </div>
+            <div class="col">
+              <div class="bot-align">
+                <button type="submit" class="btn btn-primary">Equate: </button>
+              <div id="output" class="result">
                 <p></p>
               </div>
             </div>

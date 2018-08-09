@@ -19,42 +19,58 @@ return number1 / number2;
 
 $(function () {
   // addition
-  $("form#add").submit(function(event) {
+  $("form#calculate").submit(function(event) {
     event.preventDefault();
-    var number1 = parseInt($("#add1").val());
+    var number1 = parseInt($("#input1").val());
     // console.log(number1)
-    var number2 = parseInt($("#add2").val());
+    var number2 = parseInt($("#input2").val());
     // console.log(number2)
-    var result = add(number1, number2);
+    var operator = $("input:radio[name=operator]:checked").val();
+    // console.log("1st number: " + number1);  // for debugging
+    // console.log("2nd number: " + number2);  // for debugging
+    // console.log("operator: " + operator);  // for debugging
+    var result;
+
+    if (operator === "add") {
+      result = add(number1, number2);
+    } else if (operator === "sub") {
+      result = subtract(number1, number2);
+    } else if (operator === "times") {
+      result = times(number1, number2);
+    } else if (operator === "div") {
+      result = divide(number1, number2);
+    }
     // console.log(result)
-    $("#add-output").text(result);
+    $("#output").text(result);
     // console.log($("#add-output p").val())
   });
-// subtraction
-  $("form#subtract").submit(function(event) {
-    event.preventDefault();
-    var number1 = parseInt($("#sub1").val());
-    var number2 = parseInt($("#sub2").val());
-    var result = subtract(number1, number2);
-    $("#sub-output").text(result);
-  });
-// times
-  $("form#times").submit(function(event) {
-    event.preventDefault();
-    var number1 = parseInt($("#times1").val());
-    var number2 = parseInt($("#times2").val());
-    var result = times(number1, number2);
-    $("#times-output").text(result);
-  });
-// divide
-  $("form#divide").submit(function(event) {
-    event.preventDefault();
-    var number1 = parseInt($("#div1").val());
-    var number2 = parseInt($("#div2").val());
-    var result = divide(number1, number2);
-    $("#div-output").text(result);
-  });
 });
+
+// // subtraction
+//   $("form#subtract").submit(function(event) {
+//     event.preventDefault();
+//     var number1 = parseInt($("#sub1").val());
+//     var number2 = parseInt($("#sub2").val());
+//     var result = subtract(number1, number2);
+//     $("#sub-output").text(result);
+//   });
+// // times
+//   $("form#times").submit(function(event) {
+//     event.preventDefault();
+//     var number1 = parseInt($("#times1").val());
+//     var number2 = parseInt($("#times2").val());
+//     var result = times(number1, number2);
+//     $("#times-output").text(result);
+//   });
+// // divide
+//   $("form#divide").submit(function(event) {
+//     event.preventDefault();
+//     var number1 = parseInt($("#div1").val());
+//     var number2 = parseInt($("#div2").val());
+//     var result = divide(number1, number2);
+//     $("#div-output").text(result);
+//   });
+//
 
 
 
